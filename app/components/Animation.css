@@ -1,0 +1,183 @@
+.container {
+  background-image: url("https://cdn.prod.website-files.com/6344c9cef89d6f2270a38908/653c5395a20cd20e8f4fb7b5_Freelance%20Software%20Developer%20Everything%20You%20Need%20To%20Know.webp");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s ease-in-out;
+}
+.active .container {
+  background-image: url("https://m.media-amazon.com/images/I/71ztv9RObRL._AC_UF1000,1000_QL80_.jpg");
+  background-size: cover;
+  /* z-index: 1; */
+}
+.active .container::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.269);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* z-index: -1; */
+}
+
+.active .heart-click {
+  color: rgb(255, 2, 137);
+}
+.anim-box {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  z-index: -3;
+  background-color: rgb(255, 89, 0);
+}
+.active .anim-box {
+  animation: animbox 1s linear infinite;
+  z-index: -3;
+}
+@keyframes animbox {
+  0% {
+    right: 0;
+    top: -4px;
+    
+  }
+  20% {
+    left:12rem;top: -4px;
+    background-color: rgb(0, 255, 225);
+   
+  }
+  40% {
+    left:12rem;
+    top:18rem;
+    background-color: rgb(30, 255, 0);
+   
+  }
+  60% {
+    left: -4px;
+    top: 18rem;
+    background-color: rgb(255, 0, 238);
+   
+  }
+  100% {
+    
+    top:-4px;
+    left: -4px;
+    background-color: rgb(0, 254, 0);
+   
+  }
+  
+}
+.facebook{
+    z-index: 1;
+}
+.facebook .name {
+  background-color: black;
+  color: rgb(242, 255, 241);
+  padding: 4px 20px;
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+  width: 290px;
+  text-align: center;
+ 
+}
+.input-box {
+  left: 1.6rem;
+  z-index: 1;
+}
+.input-box input {
+  font-size: 13px;
+  width: 230px;
+  background-color: rgb(239, 247, 255);
+  border: none;
+  outline: none;
+ 
+}
+.input-box input:focus {
+  outline: 1px solid blue;
+  background-color: rgba(0, 0, 0, 0.388);
+  color: white;
+}
+.btn-div {
+  left: 6px;
+  z-index: 1;
+}
+.btn-click {
+  transition: 0.2s ease;
+  width: 270px;
+}
+.btn-click:active {
+  background-color: orangered;
+  transform: scale(0.9);
+  border: 1px solid white;
+}
+.heart-click {
+  transition: 0.1s ease;
+  color: white;
+  /* font-size: 20px; */
+}
+.user {
+  transition: 0.1s ease;
+  color: white;
+  /* font-size: 20px; */
+}
+.box{
+    z-index: 1;
+    /* border: 1px solid white; */
+}
+.box p {
+  font-size: 10px;
+}
+.heart-click:active {
+  transform: scale(0.9);
+}
+.heart{
+    z-index: 1;
+}
+.heart-show {
+  visibility: hidden;
+  color: white;
+}
+.active .heart-show {
+  /* display: block; */
+  /* visibility: visible; */
+  animation: anim 0.8s 1 linear;
+}
+@keyframes anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.3);
+    visibility: visible;
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    transform: scale(1);
+    visibility: hidden;
+  }
+}
+.details{
+    position: absolute;
+    bottom: 1px;
+    height:100px;
+    width: 300px;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.413);
+    color: white;padding: 10px;
+ 
+}
+.details h5{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-left: 3px solid white;
+}
+.details p{
+    font-size: 10px;
+    color: rgb(1, 217, 255);
+    letter-spacing: 1px;
+}
